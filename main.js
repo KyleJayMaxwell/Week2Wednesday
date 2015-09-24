@@ -2,10 +2,20 @@
 
 // 1. Output each item in the following Array to your console:
 var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
+livingRoom.sort();
+
 
 // 2. Using a loop, log numbers 22-33 in the console.
+for(i=22; i<33; i++){
+	console.log(i);
+}
+
 
 // 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
+for(i=75; i<100; i+=5){
+	console.log(i);
+}
+
 
 // 4. Write a while loop that logs "This is how a professional loops." to the console 5 times.
 //     Use this as an example:
@@ -19,12 +29,37 @@ var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
 
 //        console.log(counter);
 
+var message = "This is how a professional loops.";
+var counter = 0;
+
+while(counter < 5) {
+	counter++;
+	console.log(message);
+}
+
 // 5. Write a conditional statement to find the largest of the numbers in the array provided.
-var largestNum = [-5, -2, -6, 0, -1]
+var largestNum = [-5, -2, -6, 0, -1];
+var max = -1000;
+for(i=0; i<largestNum.length; i++) {
+	if (largestNum[i] > max) {
+		max = largestNum[i];
+	}
+}
+console.log(max);
+
 
 // 6. Separately, use both a for loop and while loop to do the same thing.
 //     Print out the sentence "At home, I have _____ cats." Use the number from your counter to fill in the number.
 //     The numbers should range from 10 to 100, in increments of 25.
+for(i=10; i<100; i+=25){
+	console.log(i);
+}
+var table = 10;
+while(table < 100){
+	table += 25;
+	console.log(table);
+}
+
 
 // 7. Given the following Array, console log 'Even' if the number is even, 'Even and greater than 10' if the
 //    number is even and greater than 10, and 'Odd' if the number is odd.
