@@ -6,7 +6,7 @@ livingRoom.sort();
 
 
 // 2. Using a loop, log numbers 22-33 in the console.
-for(i=22; i<33; i++){
+for(i=22; i<34; i++){
 	console.log(i);
 }
 
@@ -29,12 +29,10 @@ for(i=75; i<100; i+=5){
 
 //        console.log(counter);
 
-var message = "This is how a professional loops.";
-var counter = 0;
+var professional = "This is how a professional loops.";
 
-while(counter < 5) {
-	counter++;
-	console.log(message);
+for(i=0;i<5;i++){
+	console.log(professional);
 }
 
 // 5. Write a conditional statement to find the largest of the numbers in the array provided.
@@ -51,13 +49,13 @@ console.log(max);
 // 6. Separately, use both a for loop and while loop to do the same thing.
 //     Print out the sentence "At home, I have _____ cats." Use the number from your counter to fill in the number.
 //     The numbers should range from 10 to 100, in increments of 25.
-for(i=10; i<100; i+=25){
-	console.log(i);
+for(i=10; i<101; i+=25){
+	console.log("At home, I have "+i+" cats");
 }
 var table = 10;
 while(table < 100){
 	table += 25;
-	console.log(table);
+	console.log("At home, I have "+table+" cats");
 }
 
 
@@ -65,6 +63,18 @@ while(table < 100){
 //    number is even and greater than 10, and 'Odd' if the number is odd.
 //    HINT: Google 'remainder operator'
 var numArray = [2, 17, 9, 24, 8];
+
+for(i=0;i<numArray.length;i++){
+	var num = numArray[i];
+
+	if((num%2 == 0) && (num>10)){
+		console.log("Even and Greater than 10");
+	} else if (num%2 == 0){
+		console.log("Even");
+	} else{
+		console.log("Odd");
+	}
+}
 
 // 8. Given the following Array, create variable primeArray with the value [2, 7, 17, 29, 41, 53, 67, 79, 97]
 var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,];
@@ -99,6 +109,30 @@ var primeArray = [];
 //       if the number is between 0 and 33
 //          computer = "rock"
 //       log computer to the console
+
+console.log(computer);
+
+while(computer < .33){
+	var computer = 'Rock';
+	break;
+}
+while(.33 < computer && computer < .66){
+	var computer = 'Paper';
+	break;
+}
+while(computer > .66 && computer < 1){
+	var computer = 'Scissors';
+	break;
+}
+console.log(computer);
+if(computer === human){
+	console.log('Its a Tie');
+}
+else if (human === 'Rock'){
+	if(computer === 'Paper');
+	console.log('You lose');
+}
+
 // 15. Now add the following conditionals to the same statement:
 //    If the random number is between .34 and .66, set the computer variable to "paper".
 //    If the random number is between .67 and 1, set the computer variable to "scissors". (Who the hell seriously chooses scissors first?)
@@ -148,6 +182,20 @@ var primeArray = [];
 // # # # #
 //  # # # #
 // # # # #
+
+var board = "";
+for (var y = 0; y < 8; y++){
+	for (var x = 0; x < 8; x++){
+		if((x+y) % 2 == 0) {
+			board += "";
+		}
+		else{
+			board += "#";
+		}
+	}
+	board += "/n";
+}
+console.log(board);
 
 // When you have a program that generates this pattern, define a variable size = 8 and change the program
 // sso that it works for any size, outputting a grid of the given width and height.
